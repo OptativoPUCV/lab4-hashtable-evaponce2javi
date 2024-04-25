@@ -57,3 +57,14 @@ Thu 25 Apr 2024 02:20:01 AM UTC:
  tests:  8|3
 total_score: 40/70
 0a19daa
+Thu 25 Apr 2024 02:29:05 AM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:98:8: error: unused variable ‘aux’ [-Werror=unused-variable]
+   98 |   long aux;
+      |        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+d7b1d27
