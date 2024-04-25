@@ -67,7 +67,8 @@ void enlarge(HashMap *map) {
   int old_c = map->capacity;
   HashMap *aux = createMap(map->capacity * 2);
   for (long i = 0; i < old_c; i++) {
-    map->buckets[i] = NULL;
+    if (map->buckets[i] != NULL)
+      map->buckets[i] = NULL;
   }
   map->capacity *= 2;
   for (long k = 0; k < old_c; k++) {
