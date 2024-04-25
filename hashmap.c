@@ -72,7 +72,7 @@ void enlarge(HashMap *map) {
   map->size = 0;
 
   for (long i = 0; i < old_c; i++) {
-    if (map->buckets[i] != NULL)
+    if (bucket[i] != NULL)
       insertMap(map, bucket[i]->key, bucket[i]->value);
     free(bucket[i]);
   }
