@@ -86,6 +86,10 @@ void eraseMap(HashMap *map, char *key) {
       break;
     pos = (pos + 1) % map->capacity;
   }
+  if (map->buckets[pos] == NULL && strcmp(map->buckets[pos]->key, key) == 0) {
+    map->buckets[pos]->key = NULL;
+    map->size--;
+  }
 }
 
 Pair *searchMap(HashMap *map, char *key) {
