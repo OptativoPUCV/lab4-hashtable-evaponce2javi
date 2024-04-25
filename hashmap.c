@@ -61,7 +61,7 @@ void insertMap(HashMap *map, char *key, void *value) {
 }
 
 void enlarge(HashMap *map) {
-  enlarge_called = 1; // no borrar (testing purposes)
+  // enlarge_called = 1; // no borrar (testing purposes)
   if (map == NULL)
     return;
   int old_c = map->capacity;
