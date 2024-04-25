@@ -81,8 +81,8 @@ void eraseMap(HashMap *map, char *key) {
   if (map == NULL || map->buckets == NULL || key == NULL)
     return;
   long pos = hash(key, map->capacity);
-  while (map->buckets != NULL && map->buckets[pos]->key == NULL ||
-         map->buckets[pos] != NULL) {
+  while (map->buckets != NULL &&
+         (map->buckets[pos]->key == NULL || map->buckets[pos] != NULL)) {
     if (strcmp(map->buckets[pos]->key, key) == 0)
       break;
     pos = (pos + 1) % map->capacity;
